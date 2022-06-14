@@ -35,3 +35,15 @@ if __name__=="__main__":
     #เรียกดูข้อมูลของ object ผ่านทางชื่อ Class
     Animal.print_detail(ula)
     Animal.print_detail(drac)
+
+    #เรียก class varibale ทั้งหมด
+    print(f'{Animal.__dict__}')
+    
+    print(f'{ula.__dict__}')
+
+
+    peter = Animal()
+    peter.new_animal("Peter","Parrot","green yellow red",2)
+
+    peter.legs = 2
+    print(f'{peter.__dict__}')
