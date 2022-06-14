@@ -2,6 +2,7 @@ from unicodedata import name
 
 
 class Person:
+    country = "Thailand"
     def __init__(self,name,gender,profession,study) -> None:
         self.name = name
         self.gender = gender
@@ -27,3 +28,19 @@ jon.studie()
 
 lalisa = Person("Lalisa","Female","Korean Singer",13)
 lalisa.work()
+
+print(f"Class Variable: {Person.country}")
+print(f"Intance Variable: {lalisa.country}")
+
+#assign value
+lalisa.country = "Korea"
+print("__________")
+print(f"Class Variable: {Person.country}")
+print(f"Intance Variable: {lalisa.country}")
+print(f"Intance Variable: {jon.country}")
+
+Person.country ="England"
+print("__________")
+print(f"Class Variable: {Person.country}")
+print(f"Intance Variable: {lalisa.country}")
+print(f"Intance Variable: {jon.country}")
