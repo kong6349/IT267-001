@@ -1,6 +1,3 @@
-from unicodedata import name
-
-
 class Person:
     country = "Thailand"
     def __init__(self,name,gender,profession,study) -> None:
@@ -15,6 +12,9 @@ class Person:
         print(f'{self.name} studies for {self.study} hour(s)') 
     def show(self):
         print(f'Name: {self.name} Gender: {self.gender} Profession: {self.profession} study: {self.study} ')
+    
+    def __del__(self):
+        print(f'Object was destroy')
 
 jessa = Person("Jessa","Male","Software Engineer",10)
 jessa.show()
