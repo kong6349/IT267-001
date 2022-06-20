@@ -1,17 +1,16 @@
 class Pizza:
     def __init__(self, ingredients):
         self.ingredients = ingredients
-
     def __repr__(self):
         return f'Pizza({self.ingredients})'
-@classmethod
-def margherita(cls):
-    return cls (['mozzarella','tomatoes'])
-@classmethod
+    @classmethod
+    def margherita(cls):
+        return cls (['mozzarella','tomatoes'])
+    @classmethod
     def prosciutto(cls):
-        return cls(['mozzarella', 'tomatoes', 'ham'])
+        return cls (['mozzarella', 'tomatoes', 'ham'])
    
-@staticmethod
+    @staticmethod
     def size(ch):
         ch = ch.upper()
         if ch == 'S':
@@ -20,8 +19,7 @@ def margherita(cls):
             return 'Large: 14 inches, 10 slices'
         else:
             return 'Default Medium: 12 inches, 8 slices'
-        my_pizza = Pizza('Cheese, Meat')
-
+my_pizza = Pizza('Cheese, Meat')
 print(my_pizza)
 print(my_pizza.margherita())
 
@@ -32,4 +30,4 @@ print('---- Class Method ----')
 print(Pizza.margherita())
 print(Pizza.prosciutto())
 print(my_pizza.margherita())
-print(Pizza.ingredients)
+
