@@ -2,10 +2,18 @@ from geographic import Geographic
 from temperature import Temperature
 
 class Country(Geographic,Temperature):
-    def __init__(self,name,area,pop) -> None:
+    """def __init__(self,name,area,pop) -> None:
         self.name = name
         self.area = area
-        self.population = pop
+        self.population = pop"""
+        
+        def __init__(self,name,area,pop) -> None:
+            #super().__init__()   #ไม่ต้องมี self
+            Geographic.__init__(self)
+            Temperature.__init__(self)
+            self.name = name
+            self.area = area
+            self.population = pop"
 
     def getpopulation(self):
         return self.population / self.area
