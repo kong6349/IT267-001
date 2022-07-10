@@ -1,5 +1,5 @@
 class Coffee:
-    def __init__(self,customer_name:str,menu:str,num:int = 1 , size:str = 'R',price:float,total:float = 0) -> None:
+    def __init__(self,customer_name:str,menu:str,num:int = 1 , size: str= 'r' ,price:float = 0,total:float = 0) -> None:
         self.customer = customer_name
         self.menu = menu
         self.num = num
