@@ -27,4 +27,8 @@ class JuiceOrder:
 
 if __name__ == "__main__":
     order1 = JuiceOrder('wj','l',30)
-    print(order1.display_order())   
+    print(order1.display_order())
+    order2 = JuiceOrder('oj','r',25)
+    print(order2.display_order()) 
+    order3 = JuiceOrder('pj','l',30)
+    print(order3.display_order()) 

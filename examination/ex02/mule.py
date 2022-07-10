@@ -8,8 +8,8 @@ class Mule(Donkey):
         print(f'Mule is running')
 
     def show_info(self):
+        print(f'****** {self.name} Info *****')
         super().show_info()
-        print('-------------------')
 
 mule1 = Mule(200,'Mumu','Blue-eye Cream',3,200)
 mule1.show_info()
